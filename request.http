@@ -2,6 +2,37 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "akshaycse26@gmail.com",
-  "password": "Akshay"
+  "email": "akshaycse99@gmail.com",
+  "password": "Akshay@25"
+}
+
+### SignIn
+
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "akshaycse99@gmail.com",
+  "password": "Akshay@25"
+}
+
+### Find a particular user with a given ID
+
+Get http://localhost:3000/auth/1
+
+### Find all user with a given email in query
+
+Get http://localhost:3000/auth?email=edit@gmail.com
+
+### Delete all user with a given email in query
+
+DELETE http://localhost:3000/auth/1
+
+### Update User
+
+PATCH  http://localhost:3000/auth/1
+content-type: application/json
+
+{
+  "email": "edit@gmail.com"
 }
