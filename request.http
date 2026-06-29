@@ -1,8 +1,10 @@
+### SignUP
+
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "akshaycse99@gmail.com",
+  "email": "akshaycse92@gmail.com",
   "password": "Akshay@25"
 }
 
@@ -15,6 +17,14 @@ content-type: application/json
   "email": "akshaycse99@gmail.com",
   "password": "Akshay@25"
 }
+
+### SignOut
+
+POST http://localhost:3000/auth/signout
+
+### Get Current Signed in user
+
+Get http://localhost:3000/auth/whoami
 
 ### Find a particular user with a given ID
 
@@ -36,3 +46,12 @@ content-type: application/json
 {
   "email": "edit@gmail.com"
 }
+
+### Set Session Cokkie Dummy test
+
+Get http://localhost:3000/auth/color/blue
+
+### Get Session Cokkie Dummy test
+
+Get http://localhost:3000/auth/color
+
