@@ -5,11 +5,11 @@ import { UpdateUserDto } from './dtos/update-user.dto';
 import { AuthService } from './auth.service';
 import { User } from './user.entity';
 import { CurrentUser } from './decorators/current-user.decorator';
-import { AuthGuard } from 'src/guards/auth.guard';
+import { AuthGuard } from '../guards/auth.guard';
 
 @Controller('auth')
 export class UsersController {
-  
+
   constructor(
     private userService: UsersService,
     private authService: AuthService
@@ -21,12 +21,12 @@ export class UsersController {
   setColor(@Param('color') color: string, @Session() session: any) {
     session.color = color
   }
-  
+
   @Get('/color')
   getColor(@Session() session: any) {
     return session
   }
-  
+
   @Get('/whoami')
   @UseGuards(AuthGuard)
   whoAmI(@CurrentUser() user: User) {

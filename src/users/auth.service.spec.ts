@@ -60,9 +60,7 @@ describe('AuthService', () => { // --- Describe and Organise test
 
   it('throws an error if user sign up with email that is in use', async () => {
     fakeUsersService.find = () => Promise.resolve([{ id: 1, email: "akshay@gmail.com", password: "1" } as User])
-
     await expect(service.signup('askahycse9@gmail.com', 'asd')).rejects.toThrow(BadRequestException)
-
   })
 
   it('throws if signin/ login is called with an unused email', async () => {
