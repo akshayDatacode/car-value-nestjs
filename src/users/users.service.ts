@@ -16,11 +16,13 @@ export class UsersService {
     return this.repo.save(user)
   }
 
-  findOne(id: number) {
+  async findOne(id: number) {
     if (!id) {
       return null
     }
-    return this.repo.findOneBy({ id })
+    const user = await this.repo.findOneBy({ id })
+    console.log("userId from Middleware", user)
+    return user
   }
 
   find(email: string) {

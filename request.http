@@ -4,7 +4,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "akshaycse92@gmail.com",
+  "email": "admin100@gmail.com",
   "password": "Akshay@25"
 }
 
@@ -14,7 +14,7 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-  "email": "akshaycse99@gmail.com",
+  "email": "admin100@gmail.com",
   "password": "Akshay@25"
 }
 
@@ -28,7 +28,7 @@ Get http://localhost:3000/auth/whoami
 
 ### Find a particular user with a given ID
 
-Get http://localhost:3000/auth/1
+Get http://localhost:3000/auth/3
 
 ### Find all user with a given email in query
 
@@ -36,7 +36,7 @@ Get http://localhost:3000/auth?email=edit@gmail.com
 
 ### Delete all user with a given email in query
 
-DELETE http://localhost:3000/auth/1
+DELETE http://localhost:3000/auth/2
 
 ### Update User
 

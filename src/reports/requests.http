@@ -7,6 +7,19 @@ Content-Type: application/json
   "year": 2034,
   "price": 34,
   "mileage": 345, 
-  "lat": 45.43,
-  "lng": 33.56
+  "lat": 1,
+  "lng": 2,
+  "approved": true
 }
+
+### Approve an existing report
+Patch http://localhost:3000/reports/13
+Content-Type: application/json
+
+{
+  "approved": false
+}
+
+### Get an estimate for an existing vehicle
+
+Get http://localhost:3000/reports?make=toyota&model=corolla&lat=0&lng=0&mileage=200&year=2034
